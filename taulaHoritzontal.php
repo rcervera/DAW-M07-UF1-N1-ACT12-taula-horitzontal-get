@@ -1,5 +1,3 @@
-<table border=1>
-<tr>
 <?php
 
 	// No es passa el paràmetre
@@ -22,11 +20,19 @@
 		echo "El valor és incorrecte";
 		exit;
 	}
-	   
+
+	if($final<1 || $final>100) {
+		echo "El valor ha der ser un número entre 1 i 100";
+		exit;
+	}
+?>
+
+<table border=1>
+<tr>
+<?php	   
 	for($i=1;$i<=$final;$i++) {
 		echo "<td>$i</td>";
-	}
-	  
+	}	  
 ?>
 </tr>
 </table>
